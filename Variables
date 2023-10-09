@@ -1,0 +1,49 @@
+*************************************************************
+// Program to explain the static variable
+
+#include <stdio.h>
+int aiml()
+{
+    static int batch = 2021; // static variable
+    batch++;
+    return batch;
+}
+ 
+void main()
+{
+    printf("%d Batch", aiml());
+    printf("\n%d Batch", aiml());
+    printf("\n%d Batch", aiml());
+}
+=======================================
+Output :
+2022 Batch
+2023 Batch
+2024 Batch
+=======================================
+
+
+
+
+*************************************************************
+// Program to explain the extern variable
+
+#include <stdio.h>
+ 
+int batch = 2022;
+ 
+int main()
+{
+    int batch = 2023;
+    {
+        extern int batch;
+        printf("Global (First) batch is %d\n", batch);
+    }
+    printf("Local (Second) batch is %d\n", batch);
+    return 0;
+}
+=======================================
+Output :
+Global (First) batch is 2022
+Local (Second) batch is 2023
+=======================================
