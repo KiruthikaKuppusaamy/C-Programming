@@ -1,4 +1,139 @@
 *************************************************************
+// Program to understand local vs global variable
+
+#include <stdio.h>
+void main() 
+{
+    int a = 5;
+    {
+       int b = 7;
+        a++;
+        b++;
+    }
+    printf("Increemented Value is %d",a);
+    printf("\nIncreemented Value is %d",b);
+}
+
+==========================================
+Output :
+error: 'b' undeclared (first use in this function)
+==========================================
+
+
+
+
+
+
+*************************************************************
+// Program to explain the local variable
+
+#include <stdio.h>
+int main() 
+{
+    int a,b;
+    a = 3, b - 6;
+    {
+      int tot;        
+      tot = a + b;
+      printf("Added Value is %d",tot );
+    }
+    return 0;
+}
+
+==========================================
+Output :
+Added Value is 9
+==========================================
+
+
+
+
+
+
+
+*************************************************************
+// Program to explain the global variable
+
+#include <stdio.h>
+int tot;     // Global Variable
+int main() 
+{
+    int a = 3;
+    int b = 6;
+    // int tot;     // Global Variable
+    {
+      tot = a + b;
+      printf("Added Value is %d",tot );
+    }
+    return 0;
+}
+
+==========================================
+Output :
+Added Value is 9
+==========================================
+
+
+
+
+
+
+*************************************************************
+// Program to explain the local and global variable with same name
+
+#include <stdio.h>
+void main() 
+{
+    int a = 5;
+    int b = 7;
+    {
+        int a = 6;
+        a++;
+        b++;
+       // printf("Increemented Value of a is %d",a);  
+    }
+    printf("Increemented Value of a is %d",a);
+    printf("\nIncreemented Value of b is %d",b);
+}
+
+=======================================
+Output :
+Increemented Value of a is 5
+Increemented Value of b is 8
+=======================================
+
+
+
+
+
+*************************************************************
+// Program to explain the automatic variable
+
+#include <stdio.h>
+void main() 
+{
+    auto int a = 5;
+    int b = 7;
+    {
+        int a = 6;
+        a++;
+        b++;
+    }
+    printf("Increemented Value of a is %d",a);
+    printf("\nIncreemented Value of b is %d",b);
+}
+
+=======================================
+Output :
+Increemented Value of a is 5
+Increemented Value of b is 8
+=======================================
+
+
+
+
+
+*************************************************************
 // Program to explain the static variable
 
 #include <stdio.h>
@@ -29,7 +164,6 @@ Output :
 // Program to explain the extern variable
 
 #include <stdio.h>
- 
 int batch = 2022;
  
 int main()
@@ -47,3 +181,14 @@ Output :
 Global (First) batch is 2022
 Local (Second) batch is 2023
 =======================================
+
+
+
+
+*************************************************************
+// Program to explain the extern variable to uses external variable
+
+
+
+
+
