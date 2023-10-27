@@ -1,0 +1,28 @@
+// Type Qualifiers - const
+
+#include<stdio.h>
+
+void main()
+{
+   int current_year = 2023 ;
+   const int birth_year = 2000 ;
+  
+   current_year = 2024 ;
+   birth_year  = 2001 ; 
+   
+   printf("current_year = %d\n birth_year  = %d",  current_year, birth_year) ;
+
+}
+===================================================================================
+Output :
+
+ERROR!
+gcc /tmp/N8oFI1Vtb1.c -lm
+/tmp/N8oFI1Vtb1.c: In function 'main':
+/tmp/N8oFI1Vtb1.c:10:16: error: assignment of read-only variable 'birth_year'
+   10 |    birth_year  = 2001 ;
+      |  
+===================================================================================
+
+
+
