@@ -1,0 +1,134 @@
+// C program to implement 
+// getch() function 
+#include <conio.h> 
+#include <stdio.h> 
+  
+// Driver code 
+int main() 
+{ 
+    printf("Enter any character: "); 
+  
+    // Reads a character but 
+    // not displays 
+    getch(); 
+  
+    return 0; 
+}
+
+
+
+
+
+// C program to implement 
+// the getchar() function 
+#include <conio.h> 
+#include <stdio.h> 
+  
+// Driver code 
+int main() 
+{ 
+    // Declaring a char type variable 
+    char ch; 
+  
+    printf("Enter the character: "); 
+  
+    // Taking a character from keyboard 
+    ch = getchar(); 
+  
+    // Displays the value of ch 
+    printf("%c", ch); 
+    return 0; 
+}
+
+
+
+// C program to implement 
+// the gets() function 
+#include <conio.h> 
+#include <stdio.h> 
+  
+// Driver code 
+int main() 
+{ 
+    // Declaring a char type array 
+    // of length 50 characters 
+    char name[50]; 
+  
+    printf("Please enter some texts: "); 
+  
+    // Reading a line of character or 
+    // a string 
+    gets(name); 
+  
+    // Displaying this line of character 
+    // or a string 
+    printf("You have entered: %s", 
+           name); 
+    return 0; 
+}
+
+
+
+///  putch() , putchar(), puts 
+
+// C program to implement 
+// the putch() functions 
+#include <conio.h> 
+#include <stdio.h> 
+  
+// Driver code 
+int main() 
+{ 
+    char ch; 
+    printf("Enter any character:\n "); 
+  
+    // Reads a character from the keyboard 
+    ch = getch(); 
+  
+    printf("\nEntered character is: "); 
+  
+    // Displays that character on the console 
+    putch(ch); 
+    return 0; 
+}
+
+
+
+// C program to implement 
+// the putchar() function 
+#include <conio.h> 
+#include <stdio.h> 
+  
+// Driver code 
+int main() 
+{ 
+    char ch; 
+    printf("Enter any character: "); 
+  
+    // Reads a character 
+    ch = getchar(); 
+  
+    // Displays that character 
+    putchar(ch); 
+    return 0; 
+}
+
+
+
+// Driver code 
+int main() 
+{ 
+    char name[50]; 
+    printf("Enter your text: "); 
+  
+    // Reads string from user 
+    gets(name); 
+  
+    printf("Your text is: "); 
+  
+    // Displays string 
+    puts(name); 
+  
+    return 0; 
+}
+
