@@ -1,0 +1,72 @@
+// !. Type 1 : Implicit Conversion
+
+#include <stdio.h>
+int main()
+{
+    int i_val = 10; 
+    char c_val = 'a'; 
+ 
+    i_val = i_val + c_val;
+ 
+    float f_val = i_val + 2.5;
+ 
+    printf("Integer Value  = %d, Float Value = %.3f", i_val, f_val);
+    
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Output :
+
+Integer Value  = 107, Float Value = 109.500
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+// 2. Type 2 : Explicit Conversion - Example 1
+
+#include<stdio.h>
+   
+int main()
+{
+    double d_val = 4.5;
+   
+    int i_val = (int)d_val + 4;
+   
+    printf("Sum of double and integer value is = %d", i_val);
+   
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Output :
+
+Sum of double and integer value is = 8
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// 3. Type 2 : Explicit Conversion - Example 2
+
+#include <stdio.h>
+
+int main() 
+{
+float f_val = 4.5;
+int i_val = (int)i_val;
+
+printf("Float Value   = %f\n", f_val);
+printf("Integer Value = %d\n", i_val);
+
+return 0;
+}
+
+.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Output :
+
+Float Value   = 4.500000
+Integer Value = 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
