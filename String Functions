@@ -1,0 +1,102 @@
+// String Functions - String Copy - strcpy()
+
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    char src[15] = "KSRCT";
+    char dest[15];
+    
+    strcpy(dest,src);
+    
+    printf("Source String : %s",src);
+    printf("\nCopied String : %s",dest);
+}
+
+
+***********************************************************************
+Output
+Source String : KSRCT
+Copied String : KSRCT
+***********************************************************************
+
+
+
+// String Functions - strncpy()
+
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    char src[15] = "KSRCT";
+    char dest[15];
+    strncpy(dest,src,3);
+    
+    printf("Source String : %s",src);
+    printf("\nCopied String : %s",dest);
+
+    
+}
+
+
+***********************************************************************
+Output
+Source String : KSRCT
+Copied String : KSR
+***********************************************************************
+
+// String Functions - String Concatenate - strcat()
+
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    char str1[40] = "KSRangasamy ";
+    char str2[30] = "College of Technology";
+    
+    printf("String 1: %s",str1);
+    printf("\nString 2: %s",str2);
+    
+    strcat(str1,str2);
+    
+    printf("\nConcatenated String : %s",str1);
+}
+
+
+***********************************************************************
+Output
+String 1: KSRangasamy 
+String 2: College of Technology
+Concatenated String : KSRangasamy College of Technology
+***********************************************************************
+
+
+// String Functions - String Concatenate - strncat()
+
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    char str1[40] = "KSRangasamy ";
+    char str2[30] = "College of Technology";
+    
+    printf("String 1: %s",str1);
+    printf("\nString 2: %s",str2);
+    
+    strncat(str1,str2,7);
+    
+    printf("\nConcatenated String : %s",str1);
+}
+
+
+***********************************************************************
+Output
+String 1: KSRangasamy 
+String 2: College of Technology
+Concatenated String : KSRangasamy College
+***********************************************************************
+
