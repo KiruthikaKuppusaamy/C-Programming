@@ -1,3 +1,72 @@
+// String Introduction - read string input from user
+
+#include <stdio.h>
+
+void main() 
+{
+    // Write C code here
+    char college[50];
+    printf("Nter College Name:");
+    scanf("%s",college);
+    printf("We Love %s",college);
+}
+
+
+***********************************************************************
+Input
+Nter College Name:KSRCT
+Output
+We Love KSRCT
+***********************************************************************
+
+
+// String Introduction - read string input with space from user 
+
+#include <stdio.h>
+
+void main() 
+{
+    // Write C code here
+    char college[50];
+    printf("Nter College Name:");
+    scanf("%[^\n]s",college);
+    printf("We Love %s",college);
+}
+
+
+***********************************************************************
+Input
+Nter College Name:KSRangasamy College of Technology
+Output
+We Love KSRangasamy College of Technology
+***********************************************************************
+
+
+// Array of String
+
+#include <stdio.h>
+ 
+void main()
+{
+  char language[4][15] = {"C","C++","Java","Python"};
+  
+  printf("Strings in the array are:\n");
+   
+  for (int i = 0; i <=3; i++) 
+  {
+    printf("%s\n", language[i]);
+  }
+}
+
+***********************************************************************
+Strings in the array are:
+C
+C++
+Java
+Python
+***********************************************************************
+
+
 // String Functions - String Copy - strcpy()
 
 #include <stdio.h>
