@@ -1,0 +1,116 @@
+// Program to add numbers 
+
+#include<stdio.h>
+{
+    int a,b,c;
+  
+    printf("Enter Numbers : ");
+    scanf("%d %d",&a,&b);
+    c = a + b;
+    printf("Answer is %d\n",c);
+   
+    printf("Enter Numbers : ");
+    scanf("%d %d",&a,&b);
+    c = a + b;
+    printf("Answer is %d\n",c);
+   
+    printf("Enter Numbers : ");
+    scanf("%d %d",&a,&b);
+    c = a + b;
+    printf("Answer is %d\n",c);
+}
+
+
+_______________________________________________________________________________________
+
+// Without Argument Without Return
+
+#include <stdio.h>
+void add();
+int main() 
+{
+  add();
+  add();    
+  add();
+    
+  return 0;
+}
+void add()
+    {
+    int a,b,c;
+    printf("Enter Numbers : ");
+    scanf("%d %d",&a,&b);
+    c = a + b;
+    printf("Answer is %d\n",c);
+    }
+
+
+_______________________________________________________________________________________
+
+// Without Argument With Return
+
+#include <stdio.h>
+int add();
+int main() 
+{
+  printf("Answer is %d\n",add());
+  printf("Answer is %d\n",add());
+  printf("Answer is %d\n",add());
+    
+  return 0;
+}
+int add()
+    {
+    int a,b,c;
+    printf("Enter Numbers : ");
+    scanf("%d %d",&a,&b);
+    c = a + b;
+    return c;
+    }
+
+
+_______________________________________________________________________________________
+
+// With Argument Without Return
+
+#include <stdio.h>
+void add();
+int main() 
+{
+  int a,b;
+  printf("Enter Numbers : ");
+  scanf("%d %d",&a,&b);
+  add(a,b);
+  printf("Enter Numbers : ");
+  scanf("%d %d",&a,&b);
+  add(a,b);
+    
+  return 0;
+}
+void add(int x,int y)
+    {
+    int c = x + y;
+    printf("Answer is %d\n",c);
+    }
+
+// With Argument With Return
+#include <stdio.h>
+int add();
+int main() 
+{
+  int a,b;
+  printf("Enter Numbers : ");
+  scanf("%d %d",&a,&b);
+  printf("Answer is %d\n",add(a,b));
+  printf("Enter Numbers : ");
+  scanf("%d %d",&a,&b);
+  printf("Answer is %d\n",add(a,b));
+    
+  return 0;
+}
+int add(int x,int y)
+    {
+    int c = x + y;
+    return c;
+    }
+
