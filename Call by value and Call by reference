@@ -1,0 +1,44 @@
+// Call by Value - Swaping two numbers
+
+#include<stdio.h>  
+
+void swap(int,int);                                               // function declaration
+
+void main()
+{
+    int a = 6,b = 12;
+    printf("\n Before Swapping a = %d and b = %d",a,b);                 
+    swap(a,b);      //  function  call
+    printf("\nCall by value Swapping a = %d and b = %d",a,b);    // actual parameters 
+}
+void swap(int a,int b)                                           // function definition
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    printf("\nAfter  Swapping a = %d and b = %d",a,b);            // formal parameters 
+}
+
+
+// Call by referance  - Swapping of two numbers
+
+#include<stdio.h>  
+
+void swap(int *,int *);                                                // function declaration
+
+void main()
+{
+    int a = 6,b = 12;
+    printf("\n Before Swapping a = %d and b = %d",a,b);                 
+    swap(&a,&b);      //  function  call
+    printf("\nCall by value Swapping a = %d and b = %d",a,b);        // actual parameters 
+}
+void swap(int *a,int *b)                                             // function definition
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    printf("\nAfter  Swapping a = %d and b = %d",*a,*b);             // formal parameters 
+}
