@@ -1,0 +1,36 @@
+// Factorial of given number using Recursive funtion
+
+#include <stdio.h>
+int main() 
+{
+ int n;
+ printf("Enter number ");
+ scanf("%d ",&n);
+ int fac = fact(n);
+ printf("Factorial is %d",fac);
+}
+
+int fact(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * fact(n-1);
+    }
+}
+
+
+************************************************************************************************
+Input
+Enter number 4
+
+Output
+Factorial is 24
+************************************************************************************************
