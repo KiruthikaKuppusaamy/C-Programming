@@ -6,7 +6,8 @@ int main()
  int a = 0, b =1, c , n;
  printf("Enter number ");
  scanf("%d",&n);
- for(int i=1;i<=n;i++)
+ printf("%d %d ",a,b);
+ for(int i=1;i<=n-2;i++)
  {
      c = a + b;
      a = b;
@@ -17,15 +18,47 @@ int main()
 
 **************************************************************************
 Input
-Enter number 4
+Enter number 6
 
 Output
-1 2 3 5 
+0 1 1 2 3 5
 **************************************************************************
 
 
 
 // Using Recursion Function
 
+#include<stdio.h>
 
+void main()
+{
+    int n,i;
+    printf("Enter no.of elements : ");
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",fib(i));
+    }
+}
+
+int fib(int n)
+{
+    if(n<=1)
+    {
+        return n;
+    }
+    else
+    {
+        return fib(n-1)+fib(n-2);
+    }
+}
+
+**************************************************************************
+Input
+Enter no.of elements : 4
+
+Output
+0 1 1 2
+**************************************************************************
 
