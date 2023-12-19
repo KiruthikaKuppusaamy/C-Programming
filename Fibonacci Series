@@ -1,0 +1,31 @@
+// Using for loop
+
+#include <stdio.h>
+int main() 
+{
+ int a = 0, b =1, c , n;
+ printf("Enter number ");
+ scanf("%d",&n);
+ for(int i=1;i<=n;i++)
+ {
+     c = a + b;
+     a = b;
+     b = c;
+     printf("%d ",c);
+ }
+}
+
+**************************************************************************
+Input
+Enter number 4
+
+Output
+1 2 3 5 
+**************************************************************************
+
+
+
+// Using Recursion Function
+
+
+
