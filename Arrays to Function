@@ -1,0 +1,48 @@
+// Passing individual elements to function
+
+#include <stdio.h>
+int main() 
+{
+ int c_score[] = {80,85,45,90};
+ display(c_score[0],c_score[1]);
+ printf("\nValues printed through function");
+}
+
+void display(int a,int b)
+{
+    printf("Values in index 0 and 1 are %d and %d",a,b);
+}
+
+***********************************************************************
+Output
+Values in index 0 and 1 are 80 and 85
+Values printed through function
+***********************************************************************
+
+
+// Passing entire one-dimentional array to function
+
+#include <stdio.h>
+
+int main() 
+{
+ int even_nos[] = {2,4,6,8};
+ display(even_nos);
+}
+
+void display(int even_nos[])
+{
+    int sum = 0;
+    for(int i=0;i<=3;i++)
+    {
+    sum = sum + even_nos[i];
+    }
+    printf("Sum of even nos is %d",sum);
+}
+
+
+***********************************************************************
+Output
+Sum of even nos is 20
+***********************************************************************
+
