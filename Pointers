@@ -1,0 +1,99 @@
+// Basic of Pointers
+
+#include <stdio.h>
+void main() 
+{
+  int x = 10,*ptr;
+  printf("Value is %d",x);         // display value in variable
+  printf("\nAddress is %p",&x);    // display address of variable
+  ptr = &x;                        // assign address of variable to pointer variable
+  printf("\nValue is %d",ptr);     // display value of pointer
+  printf("\nValue is %d",*ptr);    // display value in the address of pointer
+}
+
+
+
+// Changing value of the pointer
+
+
+
+// Arrays vs Pointers
+
+#include <stdio.h>
+void main() 
+{
+   int arr[4];
+   int i;
+
+   for(i = 0; i < 4; ++i) {
+      printf("&x[%d] = %p\n", i, &arr[i]);
+   }
+
+   printf("Address of array x: %p", arr);
+}
+
+
+
+//  Arrays and Pointers
+
+#include <stdio.h>
+int main() {
+
+  int x[5] = {1, 2, 3, 4, 5};
+  int* ptr;
+
+  // ptr is assigned the address of the third element
+  ptr = &x[2]; 
+
+  printf("*ptr = %d \n", *ptr);   // 3
+  printf("*(ptr+1) = %d \n", *(ptr+1)); // 4
+  printf("*(ptr-1) = %d", *(ptr-1));  // 2
+
+  return 0;
+}
+
+
+
+// Passing address to functions
+
+#include <stdio.h>
+void swap(int *n1, int *n2);
+
+int main()
+{
+    int num1 = 5, num2 = 10;
+
+    // address of num1 and num2 is passed
+    swap( &num1, &num2);
+
+    printf("num1 = %d\n", num1);
+    printf("num2 = %d", num2);
+    return 0;
+}
+
+void swap(int* n1, int* n2)
+{
+    int temp;
+    temp = *n1;
+    *n1 = *n2;
+    *n2 = temp;
+}
+
+
+// Passing Pointers to Functions
+
+#include <stdio.h>
+
+void addOne(int* ptr) {
+  (*ptr)++; 
+}
+
+int main()
+{
+  int* p, i = 10;
+  p = &i;
+  addOne(p);
+
+  printf("%d", *p); // 11
+  return 0;
+}
