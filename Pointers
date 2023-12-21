@@ -1,19 +1,55 @@
 // Basic of Pointers
 
-#include <stdio.h>
-void main() 
-{
-  int x = 10,*ptr;
-  printf("Value is %d",x);         // display value in variable
-  printf("\nAddress is %p",&x);    // display address of variable
-  ptr = &x;                        // assign address of variable to pointer variable
-  printf("\nValue is %d",ptr);     // display value of pointer
-  printf("\nValue is %d",*ptr);    // display value in the address of pointer
-}
+  #include <stdio.h>
+  void main() 
+  {
+  int x,*xptr;
+  x = 10;
+  xptr = &x;
+  
+  printf("Value of variable x is %d\n",x);
+  printf("Address of variable x is %p\n",&x);
+  
+  printf("Value of pointer ptr is %d\n",*xptr);
+  printf("Address of pointer ptr is %p\n",xptr);
+  }
 
 
 
 // Changing value of the pointer
+
+#include <stdio.h>
+void main() 
+{
+  int x,*xptr;
+  x = 10;
+  xptr = &x;
+  
+  printf("Value of variable x is %d\n",x);
+ 
+  x = 11;
+  printf("Value of variable x is %d\n",x);
+ 
+  *xptr = 12;
+  printf("Value of variable x is %d\n",x);
+}
+
+
+// Working of Pointers
+
+#include <stdio.h>
+void main() 
+{
+  int x,*xptr;
+  x = 10;
+  xptr = &x;
+  
+  printf("Value of variable x is %d\n",x);
+  printf("Value of variable x is %d\n",*xptr);
+  
+  printf("Address of variable x is %p\n",&x);
+  printf("Address of variable x is %p\n",xptr);
+}
 
 
 
