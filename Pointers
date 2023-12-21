@@ -58,16 +58,15 @@ void main()
 #include <stdio.h>
 void main() 
 {
-   int arr[4];
-   int i;
-
-   for(i = 0; i < 4; ++i) {
-      printf("&x[%d] = %p\n", i, &arr[i]);
-   }
-
-   printf("Address of array x: %p", arr);
-}
-
+  int arr[4];
+  
+  for(int i=0;i<4;i++)
+  {
+      printf("Address of arr[%d] is %p\n",i,&arr[i]);
+  }
+  
+  printf("\nAddress of array arr[]: %p", arr);
+ }
 
 
 //  Arrays and Pointers
@@ -75,19 +74,37 @@ void main()
 #include <stdio.h>
 int main() {
 
-  int x[5] = {1, 2, 3, 4, 5};
-  int* ptr;
+  int arr[5] = {1, 2, 3, 4, 5};
+  int *arrptr;
 
   // ptr is assigned the address of the third element
-  ptr = &x[2]; 
+  arrptr = &arr[2]; 
 
-  printf("*ptr = %d \n", *ptr);   // 3
-  printf("*(ptr+1) = %d \n", *(ptr+1)); // 4
-  printf("*(ptr-1) = %d", *(ptr-1));  // 2
+  printf("*arrptr = %d \n", *arrptr);   // 3
+  printf("*(arrptr+1) = %d \n", *(arrptr+1)); // 4
+  printf("*(arrptr-1) = %d", *(arrptr-1));  // 2
 
   return 0;
 }
 
+
+
+// Double Pointers
+
+#include<stdio.h>  
+void main ()  
+{  
+    int x = 100;  
+    int *xptr;  
+    int **ptrptr;   
+    xptr = &x;   
+    ptrptr = &xptr; 
+    
+    printf("Address of variable x: %p\n",xptr);    
+    printf("Address of single pointer ptr: %p\n",ptrptr); 
+    printf("Value at single pointer: %d\n",*xptr);   
+    printf("Value at double pointer: %d\n",**ptrptr);   
+}  
 
 
 // Passing address to functions
