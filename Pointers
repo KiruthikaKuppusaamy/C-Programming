@@ -53,7 +53,7 @@ void main()
 
 
 
-// Arrays vs Pointers
+// Address of Arrays and Pointers
 
 #include <stdio.h>
 void main() 
@@ -69,24 +69,46 @@ void main()
  }
 
 
-//  Arrays and Pointers
+
+// Accesing Arrays with Pointers
 
 #include <stdio.h>
-int main() {
 
-  int arr[5] = {1, 2, 3, 4, 5};
-  int *arrptr;
-
-  // ptr is assigned the address of the third element
-  arrptr = &arr[2]; 
-
-  printf("*arrptr = %d \n", *arrptr);   // 3
-  printf("*(arrptr+1) = %d \n", *(arrptr+1)); // 4
-  printf("*(arrptr-1) = %d", *(arrptr-1));  // 2
-
-  return 0;
+void main() 
+{
+   int x[3];
+   printf("Enter values for the array : ");
+   for(int i=0;i<=2;i++)
+   {
+    /* scanf("%d",&x[i]);  */
+       scanf("%d",x+i);
+   }
+   printf("Values in the Array are : ");
+   for(int i=0;i<=2;i++)
+   {
+    /* printf("%d",x[i]);  */
+       printf("%d ",*(x+i));
+   }
 }
 
+
+
+
+//  Indexing Pointers
+
+#include <stdio.h>
+
+void main() 
+{
+  int x[6] = {2,4,6,8,10,12};
+  int *xptr;
+
+  xptr = &x[4]; 
+
+  printf("*xptr     = %d \n", *xptr);   
+  printf("*(xptr-1) = %d \n", *(xptr-1)); 
+  printf("*(xptr+1) = %d", *(xptr+1));  
+}
 
 
 // Double Pointers
@@ -107,46 +129,20 @@ void main ()
 }  
 
 
-// Passing address to functions
-
-#include <stdio.h>
-void swap(int *n1, int *n2);
-
-int main()
-{
-    int num1 = 5, num2 = 10;
-
-    // address of num1 and num2 is passed
-    swap( &num1, &num2);
-
-    printf("num1 = %d\n", num1);
-    printf("num2 = %d", num2);
-    return 0;
-}
-
-void swap(int* n1, int* n2)
-{
-    int temp;
-    temp = *n1;
-    *n1 = *n2;
-    *n2 = temp;
-}
-
-
 // Passing Pointers to Functions
 
 #include <stdio.h>
 
-void addOne(int* ptr) {
-  (*ptr)++; 
-}
-
-int main()
+void main() 
 {
-  int* p, i = 10;
-  p = &i;
-  addOne(p);
-
-  printf("%d", *p); // 11
-  return 0;
+ int x = 2;
+ int *xp;
+ xp = &x;
+ sqr(xp);
+ 
+ printf("Square is %d",*xp);
+}
+void sqr(int *xp)
+{
+ *xp = (*xp)*(*xp);
 }
