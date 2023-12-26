@@ -70,7 +70,34 @@ void main()
 
 
 
-// Accesing Arrays with Pointers
+// Accessing Arrays with Pointers - Example 1
+
+#include <stdio.h>
+int main() {
+   int x[4] = {2,4,6,8};
+   int i;
+
+   printf("Address of array x: %p\n", x);
+   for(i = 0; i < 4; i++) 
+   {
+      printf("&x[%d] = %p\n", i, &x[i]);
+   }
+   
+   printf("_______________________________\n");
+
+   printf("Values of array x: %d\n", *x);
+   for(i = 0; i < 4; i++) 
+   {
+      printf("x[%d] = %d\n", i, x[i]);
+   }
+   
+
+   return 0;
+}
+
+
+
+// Accessing Arrays with Pointers - Example 2
 
 #include <stdio.h>
 
