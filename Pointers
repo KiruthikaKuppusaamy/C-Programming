@@ -121,16 +121,58 @@ void main()
 
 
 
+// Sum of the array with and without pointers
+/* Without Pointers */
+
+#include <stdio.h>
+void main() 
+{
+    int x[4],sum=0;
+    
+    printf("Read the value for an array\n");
+    for(int i=0;i<=3;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    
+    for(int i=0;i<=3;i++)
+    {
+        sum = sum + x[i];
+    }
+    printf("\n Sum of values in an array is %d",sum);
+}
+
+/* With Pointers */
+#include <stdio.h>
+void main() 
+{
+    int x[4],sum=0;
+    
+    printf("Read the value for an array\n");
+    for(int i=0;i<=3;i++)
+    {
+        scanf("%d",(x+i));
+    }
+    
+    for(int i=0;i<=3;i++)
+    {
+        sum = sum + *(x+i);
+    }
+    printf("\n Sum of values in an array is %d",sum);
+}
+
+
+
 //  Indexing Pointers
 
 #include <stdio.h>
 
 void main() 
 {
-  int x[6] = {2,4,6,8,10,12};
+  int x[6] = {2,4,6,8,10};
   int *xptr;
 
-  xptr = &x[4]; 
+  xptr = &x[2]; 
 
   printf("*xptr     = %d \n", *xptr);   
   printf("*(xptr-1) = %d \n", *(xptr-1)); 
