@@ -1,0 +1,104 @@
+// Program 1
+
+#include<stdio.h>  
+#include <string.h>    
+struct employee      
+{   int id;      
+    char name[50];      
+}e1;  //declaring e1 variable for structure    
+int main( )    
+{    
+   //store first employee information    
+   e1.id=101;    
+   strcpy(e1.name, "Sonoo Jaiswal");//copying string into char array    
+   //printing first employee information    
+   printf( "employee 1 id : %d\n", e1.id);    
+   printf( "employee 1 name : %s\n", e1.name);    
+return 0;  
+}    
+
+
+// Program 2
+
+#include<stdio.h>  
+#include <string.h>    
+struct employee      
+{   int id;      
+    char name[50];      
+    float salary;      
+}e1,e2;  //declaring e1 and e2 variables for structure    
+int main( )    
+{    
+   //store first employee information    
+   e1.id=101;    
+   strcpy(e1.name, "Sonoo Jaiswal");//copying string into char array    
+   e1.salary=56000;    
+    
+  //store second employee information    
+   e2.id=102;    
+   strcpy(e2.name, "James Bond");    
+   e2.salary=126000;    
+     
+   //printing first employee information    
+   printf( "employee 1 id : %d\n", e1.id);    
+   printf( "employee 1 name : %s\n", e1.name);    
+   printf( "employee 1 salary : %f\n", e1.salary);    
+    
+   //printing second employee information    
+   printf( "employee 2 id : %d\n", e2.id);    
+   printf( "employee 2 name : %s\n", e2.name);    
+   printf( "employee 2 salary : %f\n", e2.salary);    
+   return 0;    
+}    
+
+
+// Program 3
+
+struct Student
+{
+    char stud_name[30];
+    int roll_number;
+    float percentage;
+} stud_1 ;                  // while defining structure
+
+void main(){
+    struct Student stud_2;  // using struct keyword
+    
+    printf("Enter details of stud_1 : \n");
+    printf("Name : ");
+    scanf("%s", stud_1.stud_name);
+    printf("Roll Number : ");
+    scanf("%d", &stud_1.roll_number);
+    printf("Percentage : ");
+    scanf("%f", &stud_1.percentage);
+    
+    printf("***** Student 1 Details *****\n);
+    printf("Name of the Student : %s\n", stud_1.stud_name);
+    printf("Roll Number of the Student : %i\n", stud_1.roll_number);
+    printf("Percentage of the Student : %f\n", stud_1.percentage);
+}
+
+// Array of Structures
+
+#include<stdio.h>  
+#include <string.h>    
+struct student{    
+int rollno;    
+char name[10];    
+};    
+int main(){    
+int i;    
+struct student st[5];    
+printf("Enter Records of 5 students");    
+for(i=0;i<5;i++){    
+printf("\nEnter Rollno:");    
+scanf("%d",&st[i].rollno);    
+printf("\nEnter Name:");    
+scanf("%s",&st[i].name);    
+}    
+printf("\nStudent Information List:");    
+for(i=0;i<5;i++){    
+printf("\nRollno:%d, Name:%s",st[i].rollno,st[i].name);    
+}    
+   return 0;    
+}    
