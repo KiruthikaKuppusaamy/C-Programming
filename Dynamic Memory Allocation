@@ -69,3 +69,44 @@ Entered Integers are : 1 2 3 4
 **********************************************************************************************
 
 
+// realloc()
+
+#include <stdio.h>
+#include <stdlib.h>
+void main() 
+{
+   int *nptr = (int*) malloc(sizeof(int));
+   
+   if(nptr==NULL)
+   {
+     printf("Memory is not allocated");  
+   }
+   
+   printf("Enter first two integers: ");
+   for(int i=0;i<2;i++)
+   {
+      scanf("%d",nptr+i);
+   }
+   
+   nptr = (int*) realloc(nptr, 2*sizeof(int));
+   
+   printf("Enter additional integers: ");
+   for(int i=2;i<4;i++)
+   {
+      scanf("%d",nptr+i);
+   }
+   
+   // printing all the values
+   printf("All the integers are : ");
+   for(int i=0;i<4;i++)
+   {
+       printf("%d ",*(nptr+i));
+   }
+}
+
+**********************************************************************************************
+Output
+Enter first two integers: 45 63
+Enter additional integers: 79 69
+All the integers are : 45 63 79 69
+**********************************************************************************************
