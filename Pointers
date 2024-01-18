@@ -15,7 +15,6 @@
   }
 
 
-
 // Changing value of the pointer
 
 #include <stdio.h>
@@ -52,6 +51,19 @@ void main()
 }
 
 
+// Pointer Assignment
+
+#include <stdio.h>
+
+void main() 
+{
+  int x = 10;
+  int *xp,*pq;
+  xp = &x;
+  pq = xp;
+  printf("pointer = %d , pointer assignment = %d",*xp,*pq);
+ }
+
 
 // Address of Arrays and Pointers
 
@@ -67,7 +79,6 @@ void main()
   
   printf("\nAddress of array arr[]: %p", arr);
  }
-
 
 
 // Accessing Arrays with Pointers - Example 1
