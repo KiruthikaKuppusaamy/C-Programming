@@ -123,35 +123,52 @@ Salary of Cadre 2 is 25000
 Salary of Head is 60000
 *************************************************************************
 
-// Initializing Structure
+// Initializing Structure and accessing its members
 
 #include <stdio.h>
-
-struct cadre
+struct car
 {
-    char *emp_name;
-    int emp_salary;
+   int year;
+   char *model;
+   char *fueltype;
+   float mileage;
 };
 
 void main() 
 {
-   struct cadre cadre1,cadre2;
-   cadre1.emp_name = "Vikram";
-   cadre1.emp_salary = 50000;
-   cadre2.emp_name = "Vaishali";
-   cadre2.emp_salary = 70000;
-   printf("\nCadre 1 Employee Name   : %s",cadre1.emp_name);
-   printf("\nCadre 1 Employee Salary : %d",cadre1.emp_salary);
-   printf("\nCadre 2 Employee Name   : %s",cadre2.emp_name);
-   printf("\nCadre 2 Employee Salary : %d",cadre2.emp_salary);
+  // Initialising Structure
+  struct car c1 = {2016,"Toyota","Diesel",64.6};
+  struct car c2 = {2020,"Renault","Petrol",29.5};
+  
+  // Accessing members
+  printf("Car 1 Details");
+  printf("\nYear      : %d",c1.year);
+  printf("\nModel     : %s",c1.model);
+  printf("\nFuel Type : %s",c1.fueltype);
+  printf("\nMileage   : %f",c1.mileage);
+  
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  printf("\nCar 2 Details");
+  printf("\nYear      : %d",c2.year);
+  printf("\nModel     : %s",c2.model);
+  printf("\nFuel Type : %s",c2.fueltype);
+  printf("\nMileage   : %f",c2.mileage);
+ 
 }
 
 *************************************************************************
 Output
-Cadre 1 Employee Name   : Vikram
-Cadre 1 Employee Salary : 50000
-Cadre 2 Employee Name   : Vaishali
-Cadre 2 Employee Salary : 70000
+Car 1 Details
+Year      : 2016
+Model     : Toyota
+Fuel Type : Diesel
+Mileage   : 64.599998
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Car 2 Details
+Year      : 2020
+Model     : Renault
+Fuel Type : Petrol
+Mileage   : 29.500000
 *************************************************************************
 
 
