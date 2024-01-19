@@ -1,3 +1,164 @@
+// Simple Structure in Global Scope - Example 1
+
+#include <stdio.h>
+
+struct 
+{
+    int batch;
+}aiml1, aiml2;
+
+void main() 
+{
+   aiml1.batch = 2022;
+   aiml2.batch = 2023;
+   printf("I Year  :%d batch",aiml1.batch);
+   printf("\nII Year :%d batch",aiml2.batch);
+}
+
+*************************************************************************
+Output
+I Year  :2022 batch
+II Year :2023 batch
+*************************************************************************
+
+// Structure in Global Scope - Example 2
+
+#include <stdio.h>
+
+struct 
+{
+    char *emp_name;
+    int emp_experience;
+    int emp_salary;
+}cadre1,cadre2;
+
+int head()
+{
+    struct
+    {
+    char *emp_name;
+    int emp_experience;
+    int emp_salary;
+    } head;
+    
+    head.emp_experience=20;
+    
+    if( head.emp_experience>19)
+    {
+        head.emp_salary = 60000;
+    }
+    else
+    {
+       head.emp_salary = 40000;
+    }
+    return head.emp_salary;
+}
+void main() 
+{
+   printf("Enter Cadre 1 Salary :");
+   scanf("%d",&cadre1.emp_salary);
+   printf("Enter Cadre 2 Salary :");
+   scanf("%d",&cadre2.emp_salary);
+   printf("\nSalary of Cadre 1 is %d",cadre1.emp_salary);
+   printf("\nSalary of Cadre 2 is %d",cadre2.emp_salary);
+   printf("\nSalary of Head is %d",head());
+   
+}
+
+*************************************************************************
+Output
+Enter Cadre 1 Salary :15000
+Enter Cadre 2 Salary :25000
+Salary of Cadre 1 is 15000
+Salary of Cadre 2 is 25000
+Salary of Head is 60000
+*************************************************************************
+
+
+// local and global scope of structure vs structure tag
+
+#include <stdio.h>
+
+struct cadre
+{
+    char *emp_name;
+    int emp_experience;
+    int emp_salary;
+}cadre1,cadre2;
+
+int head()
+{
+    struct cadre head;
+    head.emp_experience=20;
+    
+    if( head.emp_experience>19)
+    {
+        head.emp_salary = 60000;
+    }
+    else
+    {
+       head.emp_salary = 40000;
+    }
+    return head.emp_salary;
+}
+void main() 
+{
+   printf("Enter Cadre 1 Salary :");
+   scanf("%d",&cadre1.emp_salary);
+   printf("Enter Cadre 2 Salary :");
+   scanf("%d",&cadre2.emp_salary);
+   printf("\nSalary of Cadre 1 is %d",cadre1.emp_salary);
+   printf("\nSalary of Cadre 2 is %d",cadre2.emp_salary);
+   printf("\nSalary of Head is %d",head());
+   
+}
+
+
+*************************************************************************
+Output
+Enter Cadre 1 Salary :15000
+Enter Cadre 2 Salary :25000
+Salary of Cadre 1 is 15000
+Salary of Cadre 2 is 25000
+Salary of Head is 60000
+*************************************************************************
+
+// Initializing Structure
+
+#include <stdio.h>
+
+struct cadre
+{
+    char *emp_name;
+    int emp_salary;
+};
+
+void main() 
+{
+   struct cadre cadre1,cadre2;
+   cadre1.emp_name = "Vikram";
+   cadre1.emp_salary = 50000;
+   cadre2.emp_name = "Vaishali";
+   cadre2.emp_salary = 70000;
+   printf("\nCadre 1 Employee Name   : %s",cadre1.emp_name);
+   printf("\nCadre 1 Employee Salary : %d",cadre1.emp_salary);
+   printf("\nCadre 2 Employee Name   : %s",cadre2.emp_name);
+   printf("\nCadre 2 Employee Salary : %d",cadre2.emp_salary);
+}
+
+*************************************************************************
+Output
+Cadre 1 Employee Name   : Vikram
+Cadre 1 Employee Salary : 50000
+Cadre 2 Employee Name   : Vaishali
+Cadre 2 Employee Salary : 70000
+*************************************************************************
+
+
+
+
+
+
 // Program 1
 
 #include<stdio.h>  
