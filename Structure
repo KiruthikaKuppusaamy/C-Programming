@@ -220,6 +220,31 @@ Name       : Captain
 Experience : 50
 *************************************************************************
 
+// Pointer to Strucutre
+
+#include <stdio.h>
+
+struct xyz
+{
+ int a;
+ int b;
+};
+
+void main() 
+{
+   struct xyz x = {2,4};
+   struct xyz *xptr = &x;
+   printf(“a = %d , b = %d”,xptr->a, xptr->b);
+}
+
+
+*************************************************************************
+Output
+a = 2 , b = 4
+*************************************************************************
+
+
+
 
 // Program 1
 
