@@ -173,7 +173,52 @@ Mileage   : 29.500000
 
 
 
+// Array of Structures
 
+#include <stdio.h>
+
+struct cadre
+{
+    char emp_name[15];
+    int emp_experience;
+};
+
+void main() 
+{
+   struct cadre emp[2];
+   
+   for(int i=0;i<2;i++)
+   {
+   printf("Enter Cadre %d Name :",i+1);
+   scanf("%s",emp[i].emp_name);
+   printf("\nEnter Cadre %d Experience :",i+1);
+   scanf("%d",&emp[i].emp_experience);
+   }
+   
+   for(int i=0;i<2;i++)
+   {
+   printf("\n~~~~~~~~~~~~~~~~~~~~");  
+   printf("\nDetails of Cadre %d",i+1);
+   printf("\nName       : %s",emp[i].emp_name);
+   printf("\nExperience : %d",emp[i].emp_experience);
+   }
+}
+
+*************************************************************************
+Output
+Enter Cadre 1 Name :Miller
+Enter Cadre 1 Experience :60
+Enter Cadre 2 Name :Captain
+Enter Cadre 2 Experience :50
+~~~~~~~~~~~~~~~~~~~~
+Details of Cadre 1
+Name       : Miller
+Experience : 60
+~~~~~~~~~~~~~~~~~~~~
+Details of Cadre 2
+Name       : Captain
+Experience : 50
+*************************************************************************
 
 
 // Program 1
