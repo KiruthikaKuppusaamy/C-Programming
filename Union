@@ -1,0 +1,30 @@
+// Structure vs Union
+
+#include <stdio.h>
+struct xyz
+{
+ int a;          // Size of int     - 4 bytes
+ char b;         // Size of char    - 1 bytes
+ float c;        // Size of float   - 4 bytes
+ double d;       // Size of double  - 8 bytes
+};
+
+union abc
+{
+ int a;
+ char b;
+ float c;
+ double d;
+};
+void main() 
+{
+   printf("\nSize of Structure :%ld",sizeof(struct xyz));
+   printf("\nSize of Union     :%ld",sizeof(union abc));
+}
+
+*****************************************************************************
+Output
+Size of Structure :24
+Size of Union     :8
+*****************************************************************************
+
