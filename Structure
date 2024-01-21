@@ -171,9 +171,75 @@ Fuel Type : Petrol
 Mileage   : 29.500000
 *************************************************************************
 
+// Nested Structure - as Seperate Structure
 
+#include <stdio.h>
+struct student
+ {
+       char name[20];
+       float cgpa;
+ };
+struct studies
+ {
+      char college[30];
+      struct student stu;
+ };
 
-// Array of Structures
+void main()
+{
+struct studies s;
+scanf("%s %f %s", s.stu.name,&s.stu.cgpa,
+                             s.college);
+printf("\nStudent Information");
+printf("\nName :%s \nCGPA :%.2f \nCollege :%s",
+            s.stu.name,s.stu.cgpa,s.college);
+}
+
+*************************************************************************
+Output
+Paul
+97.9
+KSRCT
+Student Information
+Name :Paul 
+CGPA :97.90 
+College :KSRCT
+*************************************************************************
+
+// Nested Structure - as embedded Structure
+
+#include <stdio.h>
+struct student
+ {
+       char name[20];
+       float cgpa;
+       struct studies
+       {       
+       char college[30];
+       }s;
+}stu;
+
+void main()
+{
+scanf("%s %f %s", stu.name,&stu.cgpa,
+                             stu.s.college);
+printf("\nStudent Information");
+printf("\nName :%s \nCGPA :%f \nCollege :%s",
+            stu.name,stu.cgpa,stu.s.college);
+}
+
+*************************************************************************
+Output
+Sika
+34.2
+SVM
+Student Information
+Name :Sika 
+CGPA :34.20 
+College :SVM
+*************************************************************************
+
+// Array of Structure
 
 #include <stdio.h>
 
@@ -241,6 +307,32 @@ void main()
 *************************************************************************
 Output
 a = 2 , b = 4
+*************************************************************************
+
+// Function to Structure - Example 1
+
+#include <stdio.h>
+struct abc
+{
+    int x, y;
+};
+
+// function prototype
+void disp(struct abc);  
+
+void main()
+{
+struct abc z = {2,4};  // function calling
+disp(z);
+}
+void disp(struct abc z) // function definition
+{
+    printf("X = %d, Y = %d",z.x,z.y);
+}
+
+*************************************************************************
+Output
+X = 2, Y = 4
 *************************************************************************
 
 
