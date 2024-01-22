@@ -173,3 +173,86 @@ typedef with array
 10 20 30 40 
 ************************************************************
 
+// typedef with pointers
+
+#include <stdio.h>
+ 
+typedef int* xptr;
+ 
+void main()
+{
+    xptr p1, p2;
+    p1 = 20,p2 = 30;
+ 
+    printf("p1 = %d, p2 = %d", p1,p2);
+}
+
+************************************************************
+Output
+p1 = 20, p2 = 30
+************************************************************
+
+// typedef with structure
+
+#include <stdio.h>
+ 
+typedef struct student
+{
+    int year;
+    char name[15];
+}stu;
+ 
+void main()
+{
+    stu s1 = {2023,"Sri"};
+    stu s2 = {2023,"Vargheese"};
+    printf("Year = %d, Name = %s", s1.year,s1.name);
+    printf("\nYear = %d, Name = %s", s2.year,s2.name);
+    
+}
+
+************************************************************
+Output
+Year = 2023, Name = Sri
+Year = 2023, Name = Vargheese
+************************************************************
+
+
+// Preprocessor - #define : token
+
+#include <stdio.h>
+ 
+#define PI 3.14
+ 
+void main()
+{
+    int radius = 5;
+    float area;
+    area = PI * radius * radius;
+    printf("Area of Circle is %.2f", area);
+}
+
+************************************************************
+Output
+Area of Circle is 78.50
+************************************************************
+
+
+// Preprocessor - #define : function
+
+#include <stdio.h>
+ 
+#define add(a,b) a+b
+ 
+void main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    printf("Addition Value is %d", add(x,y));
+}
+
+************************************************************
+Output
+4 9
+Addition Value is 13
+************************************************************
