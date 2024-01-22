@@ -1,0 +1,137 @@
+// Size of normal data type
+
+#include <stdio.h>
+struct abc
+{
+    int x;
+    int y;
+    int z;
+};
+void main() 
+{
+  printf("Size of Structure %d bytes",sizeof(struct abc));
+}
+
+************************************************************
+Output
+Size of Structure 12 bytes
+************************************************************
+
+// Size of data types with bit field and padding
+
+#include <stdio.h>
+struct abc
+{
+    int x : 2;
+    int y : 3;
+    int z : 3;
+};
+void main() 
+{
+  printf("Size of Structure %d bytes",sizeof(struct abc));
+}
+
+************************************************************
+Output
+Size of Structure 4 bytes
+************************************************************
+
+// Size of data types with bit field and packing
+
+#pragma pack(1)
+#include <stdio.h>
+struct abc
+{
+    int x : 2;
+    int y : 3;
+    int z : 3;
+};
+void main() 
+{
+  printf("Size of Structure %d bytes",sizeof(struct abc));
+}
+
+************************************************************
+Output
+Size of Structure 1 bytes
+************************************************************
+
+
+
+
+// Enumeration
+
+#include <stdio.h>
+enum months {Jan,Feb,Mar,Apr,May,June};
+void main() 
+{
+  enum months m;
+  m = Mar;
+  printf("%dnd Month",m);
+}
+
+************************************************************
+Output
+2nd Month
+************************************************************
+
+// Enumeration - Example 2
+
+#include <stdio.h>
+enum months {January=1, February, March, April, May, June, July, August, September, October, November, December};
+void main() 
+{
+  for(int i=January;i<=December;i++)
+  {
+  printf(" %d",i);
+  }
+}
+
+************************************************************
+Output
+1 2 3 4 5 6 7 8 9 10 11 12
+************************************************************
+
+// Enumeration - Example 3
+
+#include <stdio.h>  
+enum days{Sunday=1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};  
+void main()  
+{  
+   enum days d; 
+   printf("Enter day of the week : ");
+   scanf("%d",&d);
+   switch(d)  
+   {  
+       case Sunday:  
+       printf("Today is Sunday");  
+       break;  
+       case Monday:  
+       printf("Today is Monday");  
+       break;  
+       case Tuesday:  
+       printf("Today is Tuesday");  
+       break;  
+       case Wednesday:  
+       printf("Today is Wednesday");  
+       break;  
+       case Thursday:  
+       printf("Today is Thursday");  
+       break;  
+       case Friday:  
+       printf("Today is Friday");  
+       break;  
+       case Saturday:  
+       printf("Today is Saturday");  
+       break;  
+   }  
+}  
+
+
+************************************************************
+Output
+Enter day of the week : 5
+Today is Thursday
+************************************************************
+
+// 
