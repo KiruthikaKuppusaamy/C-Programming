@@ -134,4 +134,42 @@ Enter day of the week : 5
 Today is Thursday
 ************************************************************
 
-// 
+// typedef with primitive data type
+
+#include <stdio.h>
+ 
+typedef int Number;
+ 
+void main()
+{
+    Number a = 20, b = 40;
+    printf("a = %d, b = %d", a,b);
+}
+
+************************************************************
+Output
+a = 20, b = 40
+************************************************************
+
+// typedef with array
+#include <stdio.h>
+ 
+typedef int ksrct[4];
+ 
+void main()
+{
+    ksrct aiml = { 10, 20, 30, 40 };
+    
+    printf("typedef with array\n");
+    for (int i = 0; i < 4; i++) 
+    {
+        printf("%d ", aiml[i]);
+    }
+}
+
+************************************************************
+Output
+typedef with array
+10 20 30 40 
+************************************************************
+
