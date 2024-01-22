@@ -256,3 +256,90 @@ Output
 4 9
 Addition Value is 13
 ************************************************************
+
+
+// Preprocesor - conditional compilation : ifdef-else-endif with true condition
+
+# include <stdio.h>
+# define max 10
+# ifdef max 10
+     # define min 20
+# else
+     # define max 100
+     # define min 200
+# endif
+
+void main()
+{
+    printf("max = %d min = %d",max,min);
+}
+
+************************************************************
+Output
+max = 10 min = 20
+************************************************************
+
+// Preprocessor - conditional compilation : ifdef-else-endif with false condition
+
+#include <stdio.h>
+
+# ifdef max 10
+     # define min 20
+# else
+     # define max 100
+     # define min 200
+# endif
+
+void main()
+{
+    printf("max = %d min = %d",max,min);
+}
+
+************************************************************
+Output
+max = 100 min = 200
+************************************************************
+
+// Preprocessor - conditional compilation : if-elif-else-endif
+
+#include <stdio.h>
+# define x 0  // change to -1 and 2 and check the output
+# if x>0 
+     # define y "positive"
+# elif x<0
+     # define y "negative"
+# else
+     # define y "zero"
+# endif
+
+void main()
+{
+    printf("Number is %s",y);
+}
+
+************************************************************
+Output
+Number is zero
+************************************************************
+
+// Preprocessor - conditional compilation : undef
+
+#include <stdio.h>
+# define a 20
+void main()
+{
+    printf("defined value of a is %d ",a);
+   #ifdef a
+       #undef a
+       #define a 30
+  #else
+      #define a 40
+  #endif
+  printf("\nredefined value of a is  %d ",a);
+}
+
+************************************************************
+Output
+defined value of a is 20 
+redefined value of a is  30 
+************************************************************
