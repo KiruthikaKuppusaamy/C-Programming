@@ -195,3 +195,30 @@ Output
 Compares whole string -32
 Compares upto string 0
 ***********************************************************************
+
+
+// Program to concatenate two strings
+#include <stdio.h>
+#include <string.h>
+void main() 
+{
+    char str1[6] = "KSRCT";
+    char str2[6] = "KSRCT";
+    
+    int value = strcmp(str1,str2);
+   
+    if(value==0)
+    {
+    printf("Given Strings are same");
+    }
+    else
+    {
+    printf("Given Strings are different");    
+    }
+   
+}
+
+***********************************************************************
+Output
+Given Strings are same
+***********************************************************************
