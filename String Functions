@@ -169,3 +169,29 @@ String 2: College of Technology
 Concatenated String : KSRangasamy College
 ***********************************************************************
 
+// String Functions - String Compare - strcmp()
+
+// Program to concatenate two strings
+#include <stdio.h>
+#include <string.h>
+void main() 
+{
+    char str1[6] = "KSRCT";
+    char str2[6] = "KSrCT";
+    
+    printf("%d\n",'R');
+    printf("%d\n",'r');
+    int ans1 = strcmp(str1,str2);
+    int ans2 = strncmp(str1,str2,2);
+    
+    printf("Compares whole string %d\n",ans1);
+    printf("Compares upto string %d",ans2);
+      
+}
+***********************************************************************
+Output
+82
+114
+Compares whole string -32
+Compares upto string 0
+***********************************************************************
