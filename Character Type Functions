@@ -1,0 +1,66 @@
+// toupper() - program to convert characters
+
+#include <stdio.h>
+#include <ctype.h>
+void main() 
+{
+    char chr = 'K';
+    printf("%c is converted to %c",chr,tolower(chr));
+}
+
+***********************************************************************
+Output
+
+K is converted to k
+***********************************************************************
+
+// toupper() - program to convert string
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+void main() 
+{
+    char chr[] = "KIRUTHIKA";
+    
+    printf("Given String \t :%s",chr);
+    printf("\nConverted String :");
+    for(int i=0;i<=strlen(chr);i++)
+    {
+     printf("%c",tolower(chr[i]));
+    }
+}
+
+***********************************************************************
+Output
+
+Given String 	   :KIRUTHIKA
+Converted String :kiruthika
+***********************************************************************
+
+// tolower()
+
+// Program to convert lowercase to uppercase string
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+void main() 
+{
+    char chr[35];
+    
+    printf("Enter String \t :");
+    scanf("%[^\n]s",chr);
+    
+    printf("\nConverted String :");
+    for(int i=0;i<=strlen(chr);i++)
+    {
+     printf("%c",toupper(chr[i]));
+    }
+}
+
+***********************************************************************
+Output
+
+Enter String 	   :k.s.rangasamy college of technology
+Converted String :K.S.RANGASAMY COLLEGE OF TECHNOLOGY
+***********************************************************************
