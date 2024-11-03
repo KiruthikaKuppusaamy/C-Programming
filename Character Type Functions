@@ -34,7 +34,7 @@ void main()
 ***********************************************************************
 Output
 
-Given String 	   :KIRUTHIKA
+Given String 	 :KIRUTHIKA
 Converted String :kiruthika
 ***********************************************************************
 
@@ -64,3 +64,49 @@ Output
 Enter String 	   :k.s.rangasamy college of technology
 Converted String :K.S.RANGASAMY COLLEGE OF TECHNOLOGY
 ***********************************************************************
+
+// isalpha(), isdigit(), islower(), isupper()
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main()
+{
+ char ch;
+ printf("Enter an input : ");
+ scanf("%c",&ch);
+
+ if(isdigit(ch))
+ {
+ printf("Input %c is a digit",ch);
+ }
+ 
+ if(isalpha(ch))
+ {
+ printf("Input %c is an alphabet",ch);
+ }
+ 
+ if(islower(ch))
+ {
+ printf(" and a lowercase character",ch);
+ }
+ 
+ if(isupper(ch))
+ {
+ printf(" and a uppercase character",ch);
+ }
+}
+
+***********************************************************************
+Output
+
+Enter an input : q
+Input q is an alphabet and a lowercase character
+
+Enter an input : A
+Input A is an alphabet and a uppercase character
+
+Enter an input : 5
+Input 5 is a digit
+***********************************************************************
+
