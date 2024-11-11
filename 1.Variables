@@ -31,7 +31,7 @@ error: 'b' undeclared (first use in this function)
 int main() 
 {
     int a,b;
-    a = 3, b - 6;
+    a = 3, b = 6;
     {
       int tot;        
       tot = a + b;
