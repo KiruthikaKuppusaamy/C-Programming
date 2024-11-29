@@ -65,20 +65,28 @@ void main()
  }
 
 
-// Address of Arrays and Pointers
+// Address and Value of Arrays and Pointers
 
 #include <stdio.h>
 void main() 
 {
-  int arr[4];
+  int arr[4] = {2,4,6,8};
   
+  printf("Address of the array\n");
   for(int i=0;i<4;i++)
   {
       printf("Address of arr[%d] is %p\n",i,&arr[i]);
   }
+  printf("Address of array arr[]: %p", arr);
   
-  printf("\nAddress of array arr[]: %p", arr);
- }
+  printf("\n\nValues of the array\n");
+  for(int i=0;i<4;i++)
+  {
+      printf("Value of arr[%d] is %d\n",i,arr[i]);
+  }
+  printf("Value of array arr[]: %d", *arr);
+}
+
 
 
 // Accessing Arrays with Pointers - Example 1
