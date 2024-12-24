@@ -474,3 +474,69 @@ printf("\nRollno:%d, Name:%s",st[i].rollno,st[i].name);
 }    
    return 0;    
 }    
+
+
+*************************************************************************
+
+// Structure Padding
+
+#include <stdio.h>
+
+struct struct1
+{
+    char a; // 1 byte
+    char b; // 1 byte
+    int i;  // 4 bytes
+}s1;
+
+struct struct2
+{
+    char a; // 1 byte
+    int i;  // 4 bytes
+    char b; // 1 byte
+}s2;
+
+void main() 
+{
+   printf("Size of Structure 1 : %d",sizeof(s1));
+   
+   printf("\nSize of Structure 2 :%d",sizeof(s2));
+}
+
+
+Output:
+Size of Structure 1 : 8
+Size of Structure 2 :12
+
+*************************************************************************
+
+// Structure Packing
+
+#pragma pack(1)
+#include <stdio.h>
+
+struct struct1
+{
+    char a; // 1 byte
+    char b; // 1 byte
+    int i;  // 4 bytes
+}s1;
+
+struct struct2
+{
+    char a; // 1 byte
+    int i;  // 4 bytes
+    char b; // 1 byte
+}s2;
+
+void main() 
+{
+   printf("Size of Structure 1 :%d",sizeof(s1));
+   
+   printf("\nSize of Structure 2 :%d",sizeof(s2));
+}
+
+
+Output
+Size of Structure 1 :6
+Size of Structure 2 :6
